@@ -46,6 +46,7 @@
             this.rbCounter = new System.Windows.Forms.RadioButton();
             this.rbCountdownT = new System.Windows.Forms.RadioButton();
             this.rbCountdownD = new System.Windows.Forms.RadioButton();
+            this.cbFonts = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.speHours)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.speMin)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.speSec)).BeginInit();
@@ -65,20 +66,20 @@
             // 
             // lblCountdown
             // 
-            this.lblCountdown.Font = new System.Drawing.Font("Digital-7 Mono", 33F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCountdown.Font = new System.Drawing.Font("Digital-7 Mono", 35F);
             this.lblCountdown.Location = new System.Drawing.Point(5, 56);
             this.lblCountdown.Name = "lblCountdown";
             this.lblCountdown.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lblCountdown.Size = new System.Drawing.Size(320, 44);
+            this.lblCountdown.Size = new System.Drawing.Size(577, 44);
             this.lblCountdown.TabIndex = 1;
             this.lblCountdown.Text = "--.--:--:--.---";
             this.lblCountdown.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // btnStart
             // 
-            this.btnStart.Location = new System.Drawing.Point(12, 108);
+            this.btnStart.Location = new System.Drawing.Point(304, 103);
             this.btnStart.Name = "btnStart";
-            this.btnStart.Size = new System.Drawing.Size(309, 25);
+            this.btnStart.Size = new System.Drawing.Size(275, 25);
             this.btnStart.TabIndex = 2;
             this.btnStart.Text = "&Start";
             this.btnStart.UseVisualStyleBackColor = true;
@@ -86,9 +87,9 @@
             // 
             // btnReset
             // 
-            this.btnReset.Location = new System.Drawing.Point(12, 139);
+            this.btnReset.Location = new System.Drawing.Point(9, 103);
             this.btnReset.Name = "btnReset";
-            this.btnReset.Size = new System.Drawing.Size(309, 23);
+            this.btnReset.Size = new System.Drawing.Size(287, 25);
             this.btnReset.TabIndex = 3;
             this.btnReset.Text = "&Reset";
             this.btnReset.UseVisualStyleBackColor = true;
@@ -179,9 +180,9 @@
             this.gbMode.Controls.Add(this.rbCounter);
             this.gbMode.Controls.Add(this.rbCountdownT);
             this.gbMode.Controls.Add(this.rbCountdownD);
-            this.gbMode.Location = new System.Drawing.Point(331, 8);
+            this.gbMode.Location = new System.Drawing.Point(9, 145);
             this.gbMode.Name = "gbMode";
-            this.gbMode.Size = new System.Drawing.Size(151, 154);
+            this.gbMode.Size = new System.Drawing.Size(573, 55);
             this.gbMode.TabIndex = 11;
             this.gbMode.TabStop = false;
             this.gbMode.Tag = "0";
@@ -190,7 +191,7 @@
             // rbCounter
             // 
             this.rbCounter.AutoSize = true;
-            this.rbCounter.Location = new System.Drawing.Point(16, 116);
+            this.rbCounter.Location = new System.Drawing.Point(442, 22);
             this.rbCounter.Name = "rbCounter";
             this.rbCounter.Size = new System.Drawing.Size(67, 17);
             this.rbCounter.TabIndex = 2;
@@ -201,7 +202,7 @@
             // rbCountdownT
             // 
             this.rbCountdownT.AutoSize = true;
-            this.rbCountdownT.Location = new System.Drawing.Point(16, 69);
+            this.rbCountdownT.Location = new System.Drawing.Point(236, 22);
             this.rbCountdownT.Name = "rbCountdownT";
             this.rbCountdownT.Size = new System.Drawing.Size(123, 17);
             this.rbCountdownT.TabIndex = 1;
@@ -222,11 +223,22 @@
             this.rbCountdownD.UseVisualStyleBackColor = true;
             this.rbCountdownD.CheckedChanged += new System.EventHandler(this.rbCountdownD_CheckedChanged);
             // 
+            // cbFonts
+            // 
+            this.cbFonts.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbFonts.FormattingEnabled = true;
+            this.cbFonts.Location = new System.Drawing.Point(347, 25);
+            this.cbFonts.Name = "cbFonts";
+            this.cbFonts.Size = new System.Drawing.Size(235, 21);
+            this.cbFonts.TabIndex = 12;
+            this.cbFonts.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            // 
             // frmCountdown
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(488, 169);
+            this.ClientSize = new System.Drawing.Size(589, 205);
+            this.Controls.Add(this.cbFonts);
             this.Controls.Add(this.gbMode);
             this.Controls.Add(this.lblSec);
             this.Controls.Add(this.lblMin);
@@ -274,6 +286,7 @@
         private System.Windows.Forms.RadioButton rbCounter;
         private System.Windows.Forms.RadioButton rbCountdownT;
         private System.Windows.Forms.RadioButton rbCountdownD;
+        private System.Windows.Forms.ComboBox cbFonts;
     }
 }
 

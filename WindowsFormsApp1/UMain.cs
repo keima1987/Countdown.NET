@@ -6,6 +6,10 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Reflection;
+using System.IO;
+using System.Drawing.Text;
+using System.Runtime.InteropServices;
 using System.Windows.Forms;
 
 namespace WindowsFormsApp1
@@ -16,10 +20,26 @@ namespace WindowsFormsApp1
         //Global Variable
         int Mode = 0;
         DateTime NewDate;
+        List<string> FontFileNames = new List<string>();
+
+
 
         public frmCountdown()
         {
             InitializeComponent();
+            
+        }
+
+        void UseCustomFont(string name, int size, Label label)
+        {
+
+            PrivateFontCollection modernFont = new PrivateFontCollection();
+
+            modernFont.AddFontFile(name);
+
+            label.Font = new Font(modernFont.Families[0], size);
+
+
         }
 
         private void Wait(int time)
@@ -275,6 +295,33 @@ namespace WindowsFormsApp1
         private void frmCountdown_Load(object sender, EventArgs e)
         {
             bdDateTime.Value = DateTime.Now;
+            LoadFonts();
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string FontFileName = "fonts\\" + FontFileNames[cbFonts.SelectedIndex];
+            // "fonts\\"+cbFonts.SelectedItem.ToString()
+            UseCustomFont(FontFileName, 35, lblCountdown);
+        }
+
+        public void LoadFonts()
+        {
+            DirectoryInfo d = new DirectoryInfo("fonts\\");//Assuming Test is your Folder
+            //TTF Font Files
+            FileInfo[] Files = d.GetFiles("*.ttf"); //Getting Text files
+            string str = "";
+            int I = 0;
+            foreach (FileInfo file in Files)
+            {
+                str = file.Name;
+                FontFileNames.Add(str);
+                PrivateFontCollection modernFont = new PrivateFontCollection();
+
+                modernFont.AddFontFile("fonts\\"+str);
+                cbFonts.Items.Add(modernFont.Families[0].Name);
+                I++;
+            }
         }
     }
 }
