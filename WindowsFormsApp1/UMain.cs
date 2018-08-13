@@ -114,6 +114,7 @@ namespace WindowsFormsApp1
                                 chbMessage.Enabled = false;
                                 chbMessageBox.Enabled = false;
                                 edtMessage.Enabled = false;
+                                cbFonts.Enabled = false;
                             }
 
                         }
@@ -135,6 +136,7 @@ namespace WindowsFormsApp1
                                 chbMessageBox.Enabled = true;
                                 edtMessage.Enabled = false;
                             }
+                            cbFonts.Enabled = true;
                         }
                         break;
                     }
@@ -166,6 +168,7 @@ namespace WindowsFormsApp1
                                 chbMessage.Enabled = false;
                                 chbMessageBox.Enabled = false;
                                 edtMessage.Enabled = false;
+                                cbFonts.Enabled = false;
                             }
                         }
                         else
@@ -188,6 +191,7 @@ namespace WindowsFormsApp1
                                 chbMessageBox.Enabled = true;
                                 edtMessage.Enabled = false;
                             }
+                            cbFonts.Enabled = true;
                         }
                         break;
                     }
@@ -200,6 +204,7 @@ namespace WindowsFormsApp1
                             gbMode.Enabled = false;
                             btnReset.Enabled = false;
                             bdDateTime.Value = DateTime.Now;
+                            cbFonts.Enabled = false;
                         }
                         else
                         {
@@ -207,6 +212,7 @@ namespace WindowsFormsApp1
                             btnStart.Text = "&Start";
                             gbMode.Enabled = true;
                             btnReset.Enabled = true;
+                            cbFonts.Enabled = true;
                         }
                         break;
                     }
@@ -278,6 +284,18 @@ namespace WindowsFormsApp1
                             btnReset.Enabled = true;
                             bdDateTime.Enabled = true;
                             gbMode.Enabled = true;
+                            chbMessage.Enabled = true;
+                            if (chbMessage.Checked)
+                            {
+                                chbMessageBox.Enabled = false;
+                                edtMessage.Enabled = true;
+                            }
+                            else
+                            {
+                                chbMessageBox.Enabled = true;
+                                edtMessage.Enabled = false;
+                            }
+                            cbFonts.Enabled = true;
                         }
                         break;
                     }
@@ -315,7 +333,6 @@ namespace WindowsFormsApp1
                                 }
                             }
                             else
-
                             {
                                 lblCountdown.Text = "Time up";
                             }
@@ -325,6 +342,19 @@ namespace WindowsFormsApp1
                             speMin.Enabled = true;
                             speSec.Enabled = true;
                             gbMode.Enabled = true;
+                            chbMessage.Enabled = true;
+                            if (chbMessage.Checked)
+                            {
+                                chbMessageBox.Enabled = false;
+                                edtMessage.Enabled = true;
+                            }
+                            else
+                            {
+                                chbMessageBox.Enabled = true;
+                                edtMessage.Enabled = false;
+                            }
+                            cbFonts.Enabled = true;
+                            cbFonts.Enabled = true;
                         }
                         break;
                     }
