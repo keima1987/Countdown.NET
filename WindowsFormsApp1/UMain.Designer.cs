@@ -51,10 +51,12 @@
             this.chbMessageBox = new System.Windows.Forms.CheckBox();
             this.chbMessage = new System.Windows.Forms.CheckBox();
             this.edtMessage = new System.Windows.Forms.TextBox();
+            this.speSize = new System.Windows.Forms.NumericUpDown();
             ((System.ComponentModel.ISupportInitialize)(this.speHours)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.speMin)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.speSec)).BeginInit();
             this.gbMode.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.speSize)).BeginInit();
             this.SuspendLayout();
             // 
             // bdDateTime
@@ -233,7 +235,7 @@
             this.cbFonts.FormattingEnabled = true;
             this.cbFonts.Location = new System.Drawing.Point(347, 25);
             this.cbFonts.Name = "cbFonts";
-            this.cbFonts.Size = new System.Drawing.Size(235, 21);
+            this.cbFonts.Size = new System.Drawing.Size(153, 21);
             this.cbFonts.TabIndex = 12;
             this.cbFonts.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
@@ -279,11 +281,35 @@
             this.edtMessage.TabIndex = 16;
             this.edtMessage.Text = "Time up";
             // 
+            // speSize
+            // 
+            this.speSize.Location = new System.Drawing.Point(506, 25);
+            this.speSize.Maximum = new decimal(new int[] {
+            50,
+            0,
+            0,
+            0});
+            this.speSize.Minimum = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
+            this.speSize.Name = "speSize";
+            this.speSize.Size = new System.Drawing.Size(71, 22);
+            this.speSize.TabIndex = 17;
+            this.speSize.Value = new decimal(new int[] {
+            35,
+            0,
+            0,
+            0});
+            this.speSize.ValueChanged += new System.EventHandler(this.SpeSize_ValueChanged);
+            // 
             // frmCountdown
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(589, 263);
+            this.Controls.Add(this.speSize);
             this.Controls.Add(this.edtMessage);
             this.Controls.Add(this.chbMessage);
             this.Controls.Add(this.chbMessageBox);
@@ -313,6 +339,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.speSec)).EndInit();
             this.gbMode.ResumeLayout(false);
             this.gbMode.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.speSize)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -341,6 +368,7 @@
         private System.Windows.Forms.CheckBox chbMessageBox;
         private System.Windows.Forms.CheckBox chbMessage;
         private System.Windows.Forms.TextBox edtMessage;
+        private System.Windows.Forms.NumericUpDown speSize;
     }
 }
 

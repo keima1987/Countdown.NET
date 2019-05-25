@@ -11,6 +11,7 @@ using System.IO;
 using System.Drawing.Text;
 using System.Runtime.InteropServices;
 using System.Windows.Forms;
+using System.Windows;
 
 namespace WindowsFormsApp1
 {
@@ -465,7 +466,7 @@ namespace WindowsFormsApp1
             lbFonts.SelectedIndex = cbFonts.SelectedIndex;
             PrivateFontCollection fontCol = new PrivateFontCollection();
             fontCol.AddFontFile(@CurrentFolder + "\\" + lbFonts.Text);
-            lblCountdown.Font = new Font(fontCol.Families[0], 35, FontStyle.Regular);
+            lblCountdown.Font = new Font(fontCol.Families[0], (float)speSize.Value, FontStyle.Regular);
         }
 
         private void lbFonts_SelectedIndexChanged(object sender, EventArgs e)
@@ -504,6 +505,11 @@ namespace WindowsFormsApp1
             {
                 MessageBoxCheckState = false;
             }
+        }
+
+        private void SpeSize_ValueChanged(object sender, EventArgs e)
+        {
+            lblCountdown.Font = new Font(cbFonts.Text, (float)speSize.Value);
         }
     }
 }
