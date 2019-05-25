@@ -21,7 +21,6 @@ namespace WindowsFormsApp1
         //Global Variable
         int Mode = 0;
         DateTime NewDate;
-        List<string> FontFileNames = new List<string>();
         string CurrentFolder = "fonts";
 
         bool MessageBoxCheckState = false;
@@ -44,9 +43,10 @@ namespace WindowsFormsApp1
             DirectoryInfo d = new DirectoryInfo(@CurrentFolder);
             //TTF Font Files
             FileInfo[] Files = d.GetFiles("*.ttf"); //Getting ttf font files
-            string str = "";
+            
             foreach (FileInfo file in Files)
             {
+                string str = "";
                 str = file.Name;
                 lbFonts.Items.Add(str);
                 PrivateFontCollection fontCol = new PrivateFontCollection();
@@ -55,9 +55,10 @@ namespace WindowsFormsApp1
             }
             //OTF Font Files
             FileInfo[] FilesO = d.GetFiles("*.otf"); //Getting otf font files
-            string strO = "";
+            
             foreach (FileInfo fileO in FilesO)
             {
+                string strO = "";
                 strO = fileO.Name;
                 lbFonts.Items.Add(strO);
                 PrivateFontCollection fontCol = new PrivateFontCollection();
@@ -66,17 +67,6 @@ namespace WindowsFormsApp1
             }
         }
 
-        void UseCustomFont(string name, int size, Label label)
-        {
-
-            PrivateFontCollection modernFont = new PrivateFontCollection();
-
-            modernFont.AddFontFile(name);
-
-            label.Font = new Font(modernFont.Families[0], size);
-
-
-        }
 
         private void Wait(int time)
         {
@@ -516,7 +506,9 @@ namespace WindowsFormsApp1
 
         private void SpeSize_ValueChanged(object sender, EventArgs e)
         {
-            lblCountdown.Font = new Font(cbFonts.Text, (float)speSize.Value);
+            PrivateFontCollection fontCol = new PrivateFontCollection();
+            fontCol.AddFontFile(@CurrentFolder + "\\" + lbFonts.Text);
+            lblCountdown.Font = new Font(fontCol.Families[0], (float)speSize.Value, FontStyle.Regular);
         }
     }
 }
