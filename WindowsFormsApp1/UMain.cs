@@ -41,9 +41,9 @@ namespace WindowsFormsApp1
             {
                 Directory.CreateDirectory(CurrentFolder);
             }
-            DirectoryInfo d = new DirectoryInfo(@CurrentFolder);//Assuming Test is your Folder
+            DirectoryInfo d = new DirectoryInfo(@CurrentFolder);
             //TTF Font Files
-            FileInfo[] Files = d.GetFiles("*.ttf"); //Getting Text files
+            FileInfo[] Files = d.GetFiles("*.ttf"); //Getting ttf font files
             string str = "";
             foreach (FileInfo file in Files)
             {
@@ -54,7 +54,7 @@ namespace WindowsFormsApp1
                 cbFonts.Items.Add(fontCol.Families[0].Name);
             }
             //OTF Font Files
-            FileInfo[] FilesO = d.GetFiles("*.otf"); //Getting Text files
+            FileInfo[] FilesO = d.GetFiles("*.otf"); //Getting otf font files
             string strO = "";
             foreach (FileInfo fileO in FilesO)
             {
@@ -116,6 +116,7 @@ namespace WindowsFormsApp1
                                 chbMessageBox.Enabled = false;
                                 edtMessage.Enabled = false;
                                 cbFonts.Enabled = false;
+                                speSize.Enabled = false;
                             }
 
                         }
@@ -138,6 +139,7 @@ namespace WindowsFormsApp1
                                 edtMessage.Enabled = false;
                             }
                             cbFonts.Enabled = true;
+                            speSize.Enabled = true;
                         }
                         break;
                     }
@@ -170,6 +172,7 @@ namespace WindowsFormsApp1
                                 chbMessageBox.Enabled = false;
                                 edtMessage.Enabled = false;
                                 cbFonts.Enabled = false;
+                                speSize.Enabled = false;
                             }
                         }
                         else
@@ -193,6 +196,7 @@ namespace WindowsFormsApp1
                                 edtMessage.Enabled = false;
                             }
                             cbFonts.Enabled = true;
+                            speSize.Enabled = true;
                         }
                         break;
                     }
@@ -206,6 +210,7 @@ namespace WindowsFormsApp1
                             btnReset.Enabled = false;
                             bdDateTime.Value = DateTime.Now;
                             cbFonts.Enabled = false;
+                            speSize.Enabled = false;
                         }
                         else
                         {
@@ -214,6 +219,7 @@ namespace WindowsFormsApp1
                             gbMode.Enabled = true;
                             btnReset.Enabled = true;
                             cbFonts.Enabled = true;
+                            speSize.Enabled = true;
                         }
                         break;
                     }
@@ -297,6 +303,7 @@ namespace WindowsFormsApp1
                                 edtMessage.Enabled = false;
                             }
                             cbFonts.Enabled = true;
+                            speSize.Enabled = true;
                         }
                         break;
                     }
@@ -355,7 +362,7 @@ namespace WindowsFormsApp1
                                 edtMessage.Enabled = false;
                             }
                             cbFonts.Enabled = true;
-                            cbFonts.Enabled = true;
+                            speSize.Enabled = true;
                         }
                         break;
                     }
