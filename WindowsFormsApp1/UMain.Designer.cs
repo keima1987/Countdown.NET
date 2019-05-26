@@ -246,6 +246,7 @@
             this.lbFonts.Name = "lbFonts";
             this.lbFonts.Size = new System.Drawing.Size(120, 30);
             this.lbFonts.TabIndex = 13;
+            this.lbFonts.Visible = false;
             this.lbFonts.SelectedIndexChanged += new System.EventHandler(this.lbFonts_SelectedIndexChanged);
             // 
             // chbMessageBox
