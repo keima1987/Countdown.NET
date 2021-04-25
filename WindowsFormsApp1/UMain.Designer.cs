@@ -106,9 +106,9 @@
             this.lblDateTime.AutoSize = true;
             this.lblDateTime.Location = new System.Drawing.Point(12, 9);
             this.lblDateTime.Name = "lblDateTime";
-            this.lblDateTime.Size = new System.Drawing.Size(58, 13);
+            this.lblDateTime.Size = new System.Drawing.Size(62, 13);
             this.lblDateTime.TabIndex = 4;
-            this.lblDateTime.Text = "&Date/Time";
+            this.lblDateTime.Text = "&Date/Time:";
             // 
             // tmCountdown
             // 
@@ -159,9 +159,9 @@
             this.lblHours.AutoSize = true;
             this.lblHours.Location = new System.Drawing.Point(168, 9);
             this.lblHours.Name = "lblHours";
-            this.lblHours.Size = new System.Drawing.Size(38, 13);
+            this.lblHours.Size = new System.Drawing.Size(41, 13);
             this.lblHours.TabIndex = 8;
-            this.lblHours.Text = "&Hours";
+            this.lblHours.Text = "&Hours:";
             // 
             // lblMin
             // 
@@ -210,7 +210,7 @@
             this.rbCountdownT.AutoSize = true;
             this.rbCountdownT.Location = new System.Drawing.Point(236, 22);
             this.rbCountdownT.Name = "rbCountdownT";
-            this.rbCountdownT.Size = new System.Drawing.Size(123, 17);
+            this.rbCountdownT.Size = new System.Drawing.Size(124, 17);
             this.rbCountdownT.TabIndex = 1;
             this.rbCountdownT.Text = "Countdown (Timer)";
             this.rbCountdownT.UseVisualStyleBackColor = true;
@@ -254,7 +254,7 @@
             this.chbMessageBox.AutoSize = true;
             this.chbMessageBox.Location = new System.Drawing.Point(245, 206);
             this.chbMessageBox.Name = "chbMessageBox";
-            this.chbMessageBox.Size = new System.Drawing.Size(125, 17);
+            this.chbMessageBox.Size = new System.Drawing.Size(124, 17);
             this.chbMessageBox.TabIndex = 14;
             this.chbMessageBox.Text = "Show Message Box";
             this.chbMessageBox.UseVisualStyleBackColor = true;
@@ -266,7 +266,7 @@
             this.chbMessage.AutoSize = true;
             this.chbMessage.Location = new System.Drawing.Point(25, 206);
             this.chbMessage.Name = "chbMessage";
-            this.chbMessage.Size = new System.Drawing.Size(90, 17);
+            this.chbMessage.Size = new System.Drawing.Size(91, 17);
             this.chbMessage.TabIndex = 15;
             this.chbMessage.Text = "Custom Text:";
             this.chbMessage.UseVisualStyleBackColor = true;
